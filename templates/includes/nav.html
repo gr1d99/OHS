@@ -1,0 +1,34 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="{% url 'helpdesk:index' %}" class="navbar-brand">OSHD</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Blog</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Some Link <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="download">
+                        <li><a href="#">Open Sandbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">bootstrap.min.css</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}" ><span><i class="fa fa-sign-out"></i></span> Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_login' %}" ><span><i class="fa fa-sign-in"></i></span> Login</a></li>
+                {% endif %}
+            </ul>
+
+        </div>
+    </div>
+</div>

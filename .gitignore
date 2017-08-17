@@ -1,0 +1,8 @@
+*.pyc
+*.sqlite3
+.idea
+__pycache__/
+static/media_root/**
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py

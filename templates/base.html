@@ -1,0 +1,53 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% if title %} {{ title|capfirst }} | {% endif %}Teacher Student Helpdesk</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="{% static 'normalize/normalize.min.css' %}">
+        <link rel="stylesheet" href="{% static 'normalize/main.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'bootswatch/readable.bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lightbox/ekko-lightbox.min.css' %}">
+
+        <style>
+            #top{
+                margin-top: 60px;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        {% include 'includes/nav.html' %}
+
+        <div id="top">
+            <!--[if lte IE 9]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+            <![endif]-->
+
+            {% block content %}
+
+            {% endblock content %}
+
+
+            <script src="{% static 'mordenizr/modernizr.min.js' %}"></script>
+            <script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+            <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+            <script src="{% static 'lightbox/ekko-lightbox.min.js' %}"></script>
+            <script>window.jQuery || document.write('<script src="{% static 'jquery/dist/jquery.min.js' %}"><\/script>')</script>
+            <script src="{% static 'js/main.js' %}"></script>
+
+    </div>
+
+    </body>
+</html>
