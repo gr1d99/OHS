@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 LOCAL_APPS = [
     'accounts',
+    'helpdesk',
     'user_type',
 ]
 

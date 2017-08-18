@@ -1,3 +1,11 @@
 from django.contrib import admin
+from .models import Service
 
-# Register your models here.
+
+class AdminService(admin.ModelAdmin):
+    list_display = ('name', 'is_active', 'timestamp',)
+    list_filter = ('name', 'timestamp')
+    search_fields = ('name',)
+
+
+admin.site.register(Service, AdminService)

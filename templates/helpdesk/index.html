@@ -2,4 +2,17 @@
 
 {% block content %}
 
+    <div class="container">
+
+        {% if request.user.is_superuser %}
+
+            {% include 'includes/users/admin.html' %}
+
+        {% else %}
+
+            
+        {% endif %}
+
+    </div>
+
 {% endblock content %}
