@@ -17,7 +17,14 @@ class TestLogin(TestCase):
             'testadminpassword',
         )
 
+        student = UserProfile.objects.create_user(
+            'student',
+            'student@gmail.com',
+            'studentpassword'
+        )
+
         self.administrator = administrator
+        self.student = student
 
     def test_admin_in_index_view(self):
         c = Client()
@@ -27,3 +34,13 @@ class TestLogin(TestCase):
         request = response.context['request']
         self.assertEqual(request.user.is_superuser, True)
         self.assertEqual(self.administrator, request.user)
+
+
+    def test_student_in_index_view(self):
+        c = Client()
+        student_login = c.login(username='student', password='studentpassword')
+        self.assertEqual(student_login, True)
+        response = c.get('/')
+        request = response.context['request']
+        self.assertEqual(request.user.is_superuser, False)
+        self.assertEqual(self.student, request.user)
