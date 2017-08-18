@@ -25,5 +25,5 @@ class TestLogin(TestCase):
         self.assertEqual(login_admin, True)
         response = c.get('/')
         request = response.context['request']
-        self.assertEqual(request.user.is_superuser, False)
+        self.assertEqual(request.user.is_superuser, True)
         self.assertEqual(self.administrator, request.user)
