@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'TeacherStudentHelpdesk.wsgi.application'
+WSGI_APPLICATION = 'OHS.wsgi.application'
 
 
 # Database
