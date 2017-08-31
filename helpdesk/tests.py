@@ -35,7 +35,6 @@ class TestLogin(TestCase):
         self.assertEqual(request.user.is_superuser, True)
         self.assertEqual(self.administrator, request.user)
 
-
     def test_student_in_index_view(self):
         c = Client()
         student_login = c.login(username='student', password='studentpassword')
