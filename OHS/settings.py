@@ -67,7 +67,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'TeacherStudentHelpdesk.urls'
+ROOT_URLCONF = 'OHS.urls'
 
 TEMPLATES = [
     {
