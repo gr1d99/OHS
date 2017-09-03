@@ -1,3 +1,5 @@
+{% load helpdesk_tags %}
+{% get_services as services %}
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -14,9 +16,11 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Our Services <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="download">
-                        <li><a href="#">Open Sandbox</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">bootstrap.min.css</a></li>
+                        {% for service in services %}
+                            <li><a href="#">{{ service.name }}</a></li>
+                        {% empty %}
+                            <li><a href="#">Oops!! Nothing here</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
             </ul>
