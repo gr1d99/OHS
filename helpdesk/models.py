@@ -9,6 +9,7 @@ from .managers import ServiceManager
 
 class Service(models.Model):
     name = models.CharField(max_length=155, unique=True)
+    slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=False)
     timestamp = models.DateTimeField(default=timezone.now)
 

@@ -174,3 +174,9 @@ EMAIL_HOST_PASSWORD = ''  # your password
 EMAIL_USE_TLS = True
 
 AUTH_USER_MODEL = 'accounts.UserProfile'
+
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
