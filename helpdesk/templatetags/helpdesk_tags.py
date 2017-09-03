@@ -7,4 +7,4 @@ register = template.Library()
 
 @register.simple_tag
 def get_services():
-    return Service.objects.actice()
+    return Service.objects.active()
