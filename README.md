@@ -6,4 +6,4 @@ Teachers will be able to provide solutions to issues submitted by students.
 
 ## Demo
 
-Coming soon.
+(ohsd)[https://ohs.herokuapp.com]
