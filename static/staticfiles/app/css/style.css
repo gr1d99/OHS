@@ -194,22 +194,22 @@ body {
 /*       Slides backgrounds     */
 /********************************/
 #first-slider .slide1 {
-    background-image: url(http://localhost:8000/static/img/finance.jpg);
+    background-image: url('/static/img/finance.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #first-slider .slide2 {
-  background-image: url(http://localhost:8000/static/img/academics.jpg);
+  background-image: url(/static/img/academics.jpg);
       background-size: cover;
     background-repeat: no-repeat;
 }
 #first-slider .slide3 {
-  background-image: url(http://localhost:8000/static/img/catering.jpg);
+  background-image: url(/static/img/catering.jpg);
       background-size: cover;
     background-repeat: no-repeat;
 }
 #first-slider .slide4 {
-  background-image: url(http://localhost:8000/static/img/accomodation.jpg);
+  background-image: url(/static/img/accomodation.jpg);
       background-size: cover;
     background-repeat: no-repeat;
 }
