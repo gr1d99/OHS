@@ -4,7 +4,7 @@ from helpers.mixins import TitleMixin
 
 
 class IndexView(TitleMixin, TemplateView):
-    template_name = 'helpdesk/index.html'
+    template_name = 'index.html'
     title = 'Index'
 
     def get_context_data(self, **kwargs):

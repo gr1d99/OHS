@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        {% if request.user.is_superuser %}
+
+            <div class="container">
+
+            {% include 'includes/users/admin.html' %}
+
+            </div>
+
+        {% else %}
+
+            {% include 'includes/slider.html' %}
+
+{#            <div class="panel panel-primary">#}
+{#                <div class="page-header"></div>#}
+{#                <div class="panel-body">#}
+{#                    <div class="row">#}
+{#                        <div class="col-lg-6 col-md-6">#}
+{#                            <div class="panel panel-primary">#}
+{#                                <div class="panel-heading"><span><i class="fa fa-book"></i> </span>Academics</div>#}
+{#                                <div class="panel-body">#}
+{#                                    <p class="text-justify">#}
+{#                                        View and request Academics services#}
+{#                                    </p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-6 col-md-6">#}
+{#                            <div class="panel panel-primary">#}
+{#                                <div class="panel-heading"><span><i class="fa fa-money"></i> </span> Finance</div>#}
+{#                                <div class="panel-body"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-6 col-md-6">#}
+{#                            <div class="panel panel-primary">#}
+{#                                <div class="panel-heading"><span><i class="fa fa-spoon"></i> </span> Catering</div>#}
+{#                                <div class="panel-body"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-6 col-md-6">#}
+{#                            <div class="panel panel-primary">#}
+{#                                <div class="panel-heading"><span><i class="fa fa-bed"></i> </span>Accomodation</div>#}
+{#                                <div class="panel-body"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+
+            
+        {% endif %}
+
+    </div>
+
+{% endblock content %}
