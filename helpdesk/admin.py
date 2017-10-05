@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Service
+from .models import HelpRequest, Service
 
 
 class AdminService(admin.ModelAdmin):
@@ -11,4 +11,10 @@ class AdminService(admin.ModelAdmin):
     }
 
 
+class AdminHelpRequest(admin.ModelAdmin):
+    list_display = ('for_service', 'timestamp', 'is_handled')
+    list_filter = ('timestamp', )
+
+
 admin.site.register(Service, AdminService)
+admin.site.register(HelpRequest, AdminHelpRequest)
