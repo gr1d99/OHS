@@ -233,3 +233,13 @@ a:hover{
     color: #134fb8;
     text-decoration: none;
 }
+
+.service-description{
+  padding: 20px;
+}
+.get-service{
+  padding: 50px;
+}
+.footer{
+    margin-top: 50px;
+}
