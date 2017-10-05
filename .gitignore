@@ -6,3 +6,4 @@ static/media_root/**
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
+env/
